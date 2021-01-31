@@ -1,0 +1,5 @@
+name: 'JUCE 6 Linux Build'
+description: 'Build a JUCE 6 project on linux using cmake'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
