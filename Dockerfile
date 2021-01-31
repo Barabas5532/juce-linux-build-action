@@ -25,4 +25,6 @@ RUN apt install -y \
 RUN rm -rf /var/lib/apt/lists/* && \
     apt clean
 
+COPY entrypoint.sh /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
