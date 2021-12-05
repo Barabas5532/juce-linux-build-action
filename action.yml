@@ -1,5 +1,12 @@
 name: 'JUCE 6 Linux Build'
 description: 'Build a JUCE 6 project on linux using cmake'
+inputs:
+  build_type:
+    description: 'CMake build type'
+    default: 'Release'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    CMAKE_BUILD_TYPE: ${{ inputs.build_type }}
